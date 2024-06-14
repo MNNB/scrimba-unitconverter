@@ -3,6 +3,21 @@ violet: #6943FF
 light gray: #F4F4F4
 */
 
+:root,
+:root.light {
+	--color-bg: #F4F4F4;
+	--li-color-bg: #fff;
+	--p-color: #353535;
+    --h2-color: #5A537B;
+}
+
+:root.dark {
+	--color-bg: #1F2937;
+	--li-color-bg: #273549;
+	--p-color: #FFFFFF;
+    --h2-color: #CCC1FF;
+}
+
 html {
     box-sizing: border-box;
   }
@@ -60,10 +75,11 @@ button {
     height: 40px;
     font-size: 16px;
     color: #3D3D3D;
+    margin: 8px;
 }
 
 .results {
-    background-color: #F4F4F4;
+    background-color: var(--color-bg);;
     padding: 16px 24px;
 }
 
@@ -75,14 +91,14 @@ h1 {
 
 h2 {
     margin: 0;
-    color: #5A537B;
+    color: var(--h2-color);
     font-size: 16px;
     font-weight: 700;
 }
 
 p {
     margin: 0;
-    color: #353535;
+    color: var(--p-color);
     font-size: 14px;
     font-weight: 400;
 }
@@ -97,9 +113,56 @@ ul {
 }
 
 li {
-    background-color: white;
+    background-color: var(--li-color-bg);;
     padding: 12px;
     border-radius: 4px;
     display: flex;
     gap: 12px;
 }
+
+.toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.switch {
+    margin: 12px;
+    display: inline-block;
+  }
+  
+  .switch input {
+    display: none;
+  }
+  
+  .switch label {
+    display: block;
+    width: 60px;
+    height: 30px;
+    padding: 3px;
+    border-radius: 15px;
+    border: 2px solid var(--p-color);
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .switch label::after {
+    content: "";
+    display: inherit;
+    width: 20px;
+    height: 20px;
+    border-radius: 12px;
+    background: var(--p-color);
+    transition: 0.3s;
+  }
+  
+  .switch input:checked ~ label {
+    border-color: var(--p-color);
+  }
+  
+  .switch input:checked ~ label::after {
+    translate: 30px 0;
+    background: var(--p-color);
+  }
+  

@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="main.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -19,24 +21,36 @@
         </div>
 
         <div class="results">
-            <ul>
+            <ul id="li">
                 <li>
                     <h2>Length (Meter/Feet)</h2>
                     <div id="length-el"><p>meters = feet | feet = meters</p></div>
                 </li>
-                <li>
+                <li class="li">
                     <h2>Volume (Liters/Gallons)</h2>
                     <div id="volume-el"><p>liters = gallons | gallons = liters</p></div>
                 </li>
-                <li>
+                <li class="li">
                     <h2>Mass (Kilograms/Pounds)</h2>
                     <div id="mass-el"><p>kilos = pounds | pounds = kilos</p></div>
                 </li>
             </ul>
+
+            <!-- <input type="checkbox" id="mode" class="form-check-input">
+            <label for="mode" class="form-check-label"></label> -->
+            
+            <div class="toggle">
+                <p>Light</p>
+            <span class="switch">
+                <input id="mode" type="checkbox" />
+                <label for="mode" class="form-check-label"></label>
+            </span>
+            <p>Dark</p>
+            </div>
+
         </div>
 
     </div>
 
-<script type="text/javascript" src="main.js"></script>
 </body>
 </html>
